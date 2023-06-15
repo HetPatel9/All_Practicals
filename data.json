@@ -1,0 +1,82 @@
+{
+  "IST": {
+    "full_form": "India Standard Time",
+    "offset": 5.5
+  },
+  "CST": {
+    "full_form": "China Standard Time",
+    "offset": 8.0
+  },
+  "EST": {
+    "full_form": "Eastern Standard Time",
+    "offset": -5.0
+  },
+  "JST": {
+    "full_form": "Japan Standard Time",
+    "offset": 9.0
+  },
+  "PST": {
+    "full_form": "Pacific Standard Time",
+    "offset": -8.0
+  },
+  "PT": {
+    "full_form": "Pacific Time",
+    "offset": -7.0
+  },
+  "EAST": {
+    "full_form": "Eastern African Time",
+    "offset": 3.0
+  },
+  "CAT": {
+    "full_form": "Central Africa Time",
+    "offset": 2.0
+  },
+  "BST": {
+    "full_form": "Bangladesh Standard Time",
+    "offset": 6.0
+  },
+  "MST": {
+    "full_form": "Mountain Standard Time",
+    "offset": -7.0
+  },
+  "NPT": {
+    "full_form": "Nepal Time",
+    "offset": 5.75
+  },
+  "ACST": {
+    "full_form": "Australian Central Standard Time",
+    "offset": 9.5
+  },
+  "GMT": {
+    "full_form": "Greenwich Mean Time",
+    "offset": 0
+  },
+  "IRST": {
+    "full_form": "Iran Standard Time",
+    "offset": 3.5
+  },
+  "MSK": {
+    "full_form": "Moscow Standard Time",
+    "offset": 3
+  },
+  "AFT": {
+    "full_form": "Afghanistan Time",
+    "offset": 4.5
+  },
+  "NZST": {
+    "full_form": "New Zealand Standard Time",
+    "offset": 12
+  },
+  "EET": {
+    "full_form": "Eastern European Time",
+    "offset": 2
+  },
+  "FNT": {
+    "full_form": "Fernando de Noronha Time",
+    "offset": -2
+  },
+  "CET": {
+    "full_form": "Central European Time",
+    "offset": 1
+  }
+}
