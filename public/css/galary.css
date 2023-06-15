@@ -1,0 +1,13 @@
+h1 {
+  width: fit-content;
+  margin: 20px auto;
+}
+.container1 {
+  width: 1000px;
+  margin: auto;
+}
+.container1 img {
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
