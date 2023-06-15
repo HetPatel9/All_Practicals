@@ -1,0 +1,25 @@
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(101, 149, 240),
+    rgb(68, 221, 132)
+  );
+}
+#loginForm {
+  width: 450px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 30px;
+  box-shadow: 0 0 20px black;
+}
+#loginForm button {
+  width: 150px;
+  margin: auto;
+}
+#loginForm h1 {
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 20px;
+}

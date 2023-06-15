@@ -1,0 +1,21 @@
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(101, 149, 240),
+    rgb(68, 221, 132)
+  );
+}
+#logoutBtn {
+  width: 150px;
+  margin: auto;
+}
+.mb-3 {
+  width: fit-content;
+  margin: auto;
+}
+form button {
+  width: 150px;
+}
+.title {
+  margin-top: 100px;
+}

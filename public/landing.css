@@ -1,0 +1,20 @@
+body {
+  background-image: linear-gradient(
+    to right,
+    rgb(101, 149, 240),
+    rgb(68, 221, 132)
+  );
+}
+.container {
+  width: 500px;
+  margin: auto;
+  margin-top: 100px;
+}
+.container button {
+  width: 100px;
+  margin-top: 20px;
+}
+.container button a {
+  text-decoration: none;
+  color: black;
+}
