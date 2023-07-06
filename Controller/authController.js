@@ -20,7 +20,7 @@ const createSendToken = (user, statusCode, res) => {
   });
 };
 
-exports.login = async (req, res, next) => {
+const login = async (req, res, next) => {
   try {
     const { email, password } = req.body;
     if (!email || !password) {
@@ -42,9 +42,8 @@ exports.login = async (req, res, next) => {
   }
 };
 
-exports.register = async (req, res, next) => {
+const register = async (req, res, next) => {
   try {
-    console.log(req.body);
     const user = await User.create({
       name: req.body.name,
       email: req.body.email,
@@ -63,7 +62,7 @@ exports.register = async (req, res, next) => {
   }
 };
 
-exports.authenticate = async (req, res, next) => {
+const authenticate = async (req, res, next) => {
   try {
     if (!req.cookies.token) {
       throw new Error("you have no token");
@@ -87,7 +86,10 @@ exports.authenticate = async (req, res, next) => {
     });
   }
 };
-exports.logout = (req, res, next) => {
+
+const logout = (req, res, next) => {
   res.clearCookie(["token"]);
   res.status(200).json({ status: "success" });
 };
+
+module.exports = { login, logout, authenticate, register };
