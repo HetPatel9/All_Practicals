@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+}
+
+.calculator {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(241, 241, 241);
+}
+
+.screen,
+.functions,
+.key-pad {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.key-pad,
+.functions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#screen {
+    width: 92%;
+    height: 45px;
+    font-size: 33px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: right;
+}
+
+.function-box {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+}
+
+.box1 {
+    justify-content: flex-start;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.btn,
+input {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.box1 button {
+    width: 20%;
+    margin-right: 10px;
+    font-size: 19px;
+}
+
+.box2 {
+    height: 30px;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.box2 button {
+    justify-content: center;
+    width: 18%;
+    font-size: 18px;
+}
+
+.box3 {
+    height: 32px;
+    justify-content: flex-start;
+}
+
+.box3 button {
+    width: 40%;
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.function-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.trigonometry {
+    display: none;
+    width: 95%;
+    flex-direction: row;
+}
+
+.backbtn svg {
+    margin: auto;
+    width: 50%;
+}
+
+.inverseBtn {
+    width: 20%;
+    display: flex;
+}
+
+.inverseBtn button {
+    width: 80%;
+    height: 30px;
+    align-self: center;
+    margin: auto;
+}
+
+.rg1 {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+
+.rg2 {
+    display: none;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+}
+
+.rg2 button,
+.rg1 button {
+    width: 30%;
+    height: 30px;
+    margin: auto;
+    font-size: 18px;
+
+}
+
+.inv {
+    font-size: 18px;
+}
+
+.rg3 {
+    display: none;
+    flex-direction: row;
+    width: 95%;
+    justify-content: center;
+}
+
+.rg3 button {
+    height: 30px;
+    width: 20%;
+    margin: auto;
+    font-size: 18px;
+}
+
+.function-row {
+    margin-top: 4px;
+}
+
+.key-pad-row {
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+button{
+    border: none;
+    background-color: rgb(240, 240, 240);
+}
+input{
+    border: none;
+}
+
+.trigo-svg-2 {
+    transform: rotate(-90deg);
+    margin-left: 5px;
+}
+
+.key-pad-row button {
+    width: 19%;
+    height: 40px;
+    text-align: space-evenly;
+    font-size: 18px;
+    background-color: rgb(248, 248, 248);
+}
+
+.key-pad-row1 button {
+    width: 16%;
+}
+
+button:hover {
+    background-color: rgb(235, 143, 68);
+}
+
+.historyBtn button {
+    width: 48%;
+    margin: auto;
+}
+
+.history {
+    display: block;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.num {
+    font-weight: 600;
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width:1500px) {
+    .calculator {
+        width: 36%;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .calculator {
+        width: 44%;
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .calculator {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:850px) {
+    .calculator {
+        width: 75%;
+    }
+}
