@@ -1,0 +1,339 @@
+openapi: 3.0.0
+info:
+  title: API Documentation Practical
+  description: This is the Practical done for the SQL Practical.
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:3000/
+    description: This is the main server where the Application is running in development
+  - url: http://het-sql.practical.com
+    description: This will be for the production server.
+
+paths:
+  /user:
+    # To get all users
+    get:
+      summary: Returns a list of users.
+      description: This API end point is used to get all users
+      responses:
+        '200':
+          description: A JSON object with array of user names and success message
+          content:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: A Fail message and internal server error
+          content:
+            application/json:
+              schema:
+                type: array
+
+    # To create new User
+    post:
+      summary: Creates a user.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+                address:
+                  type: string
+                phone:
+                  type: integer
+      responses:
+        '201':
+          description: Created User
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      email:
+                        type: string
+                      address:
+                        type: string
+                      phone:
+                        type: integer
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  error:
+                    type: string
+        '400':
+          description: Bad Request for body or validation error
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  error:
+                    type: string
+
+  /user/{id}:
+    # To get perticular user from ID
+    get:
+      summary: Get a user by ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      email:
+                        type: string
+                      address:
+                        type: string
+                      phone:
+                        type: integer
+
+    # Delete perticular User by Id
+    delete:
+      summary: Delete User by ID
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: User Not Found
+
+  /product:
+    # To get all product
+    get:
+      summary: Returns a array of Products.
+      description: This API end point is used to get all Products
+      responses:
+        '200':
+          description: A JSON object with array of product names and success message
+          content:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: A Fail message and internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+
+    # To create new Product
+    post:
+      summary: Creates a Product.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                price:
+                  type: integer
+                description:
+                  type: string
+      responses:
+        '201':
+          description: Product created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      description:
+                        type: string
+                      price:
+                        type: integer
+
+  /product/{id}:
+    #  Delete the perticular Product
+    delete:
+      summary: It will delete the Product by its Id
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        '204':
+          description: No content
+        '404':
+          description: Product Not Found
+
+  /order:
+    # To get all order
+    get:
+      summary: Returns all the orders in array.
+      description: This API end point is used to get all Orders
+      responses:
+        '200':
+          description: All orders will be returned
+          content:
+            application/json:
+              schema:
+                type: object
+        '500':
+          description: A Fail message and internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+
+    # To create new Product
+    post:
+      summary: Creates a Order.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: integer
+                status:
+                  example: 'delivered or undelivered'
+                  type: string
+                orderDate:
+                  type: string
+                  description: Start date
+                  example: '2017-01-01'
+                  format: date
+      responses:
+        '201':
+          description: Order created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                        example: 1
+                      userId:
+                        type: integer
+                        example: 1
+                      deliveryDate:
+                        type: string
+                        example: '2017-01-01'
+                      orderDate:
+                        type: string
+                        example: '2017-01-01'
+  /orderdetail:
+    # To get all order Details
+    get:
+      summary: Returns all order details
+      description: This API end point is used to get all Order Details
+      responses:
+        '200':
+          description: A JSON object with array of Order Details and success message
+          content:
+            application/json:
+              schema:
+                type: array
+        '500':
+          description: A Fail message and internal server error
+          content:
+            application/json:
+              schema:
+                type: object
+
+    # To create new Order details
+    post:
+      summary: Creates a Order Detail.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                productId:
+                  type: integer
+                  example: 1
+                orderId:
+                  type: integer
+                  example: 1
+      responses:
+        '201':
+          description: Product created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      orderId:
+                        type: integer
+                      productId:
+                        type: integer

@@ -1,7 +1,7 @@
-const { sequelize, DataTypes } = require("./../DatabaseConnection");
+const { sequelize, DataTypes } = require('./../DatabaseConnection');
 
 const Order = sequelize.define(
-  "order",
+  'order',
   {
     id: {
       type: DataTypes.INTEGER,
@@ -10,7 +10,7 @@ const Order = sequelize.define(
     },
     status: {
       type: DataTypes.ENUM,
-      values: ["undelivered", "delivered"]
+      values: ['undelivered', 'delivered']
     },
     orderDate: {
       type: DataTypes.DATE,

@@ -1,10 +1,10 @@
-const express = require("express");
-const orderDetailsController = require("./../Controller/OrderDetailesController");
+const express = require('express');
+const orderDetailsController = require('./../Controller/OrderDetailesController');
 
 const router = express.Router();
 
 router
-  .route("/")
+  .route('/')
   .post(orderDetailsController.createOrderDetail)
   .get(orderDetailsController.getAllOrderDetails);
 
